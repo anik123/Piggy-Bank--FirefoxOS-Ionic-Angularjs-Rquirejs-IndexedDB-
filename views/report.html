@@ -1,0 +1,87 @@
+﻿<ion-view>
+    <!--<ion-header-bar align-title="center" class="bar bar-header item-input-inset bar-positive">
+        <div class="buttons">
+            <button class="button icon ion-reply" ng-click="back()"></button>
+        </div>
+        <label class="item-input-wrapper" style="margin-left: 7px;">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="Search transaction" ng-model="search.serachText">
+        </label>
+    </ion-header-bar>
+    <ion-content class="has-header">
+    </ion-content>-->
+
+    <ion-side-menus>
+        <!-- Center content -->
+        <pane ion-side-menu-content drag-content="false">
+            <ion-header-bar align-title="center" class="bar bar-header item-input-inset bar-positive">
+                <div class="buttons">
+                    <button class="button icon ion-navicon-round" ng-click="toggleLeftSideMenu()"></button>
+                </div>
+                <label class="item-input-wrapper" style="margin-left: 7px;">
+                    <i class="icon ion-ios-search placeholder-icon"></i>
+                    <input type="search" placeholder="Search transaction" ng-model="search.serachText">
+                </label>
+            </ion-header-bar>
+            <ion-content class="has-header">
+
+            </ion-content>
+        </pane>
+
+        <!-- Left menu -->
+        <ion-side-menu side="left">
+            <ion-header-bar align-title="center" class="bar bar-header item-input-inset bar-positive">
+
+            </ion-header-bar>
+            <ion-content class="has-header">
+                <div class="list">
+                    <div class="item item-divider">
+                        Transaction History
+                    </div>
+                    <a class="item item-icon-left item-icon-right" href="#">
+                        <i class="icon ion-arrow-move"></i>
+                        This Month
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </a>
+                    <a class="item item-icon-left item-icon-right" href="#">
+                        <i class="icon ion-shuffle"></i>
+                        Specific Date
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </a>
+
+                    <div class="item item-divider">
+                        Statistics
+                    </div>
+                    <a class="item item-icon-left item-icon-right" href="#">
+                        <i class="icon ion-archive"></i>
+                        Diposit Analysis
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </a>
+                    <a class="item item-icon-left item-icon-right" href="#">
+                        <i class="icon ion-share"></i>
+                        Withdraw Analysis
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </a>
+
+
+                    <a class="item item-icon-left item-icon-right" href="#">
+                        <i class="icon ion-arrow-graph-up-right"></i>
+                        Combine Analysis
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </a>
+                    <div class="item item-divider">
+                        Exit Menu
+                    </div>
+                    <a class="item item-icon-left item-icon-right" href="#/deshboard">
+                        <i class="icon ion-reply"></i>
+                        Back
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </a>
+                </div>
+
+
+            </ion-content>
+        </ion-side-menu>
+    </ion-side-menus>
+
+</ion-view>

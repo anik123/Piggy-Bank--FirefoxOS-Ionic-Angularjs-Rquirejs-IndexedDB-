@@ -1,0 +1,40 @@
+﻿<div class="modal">
+    <header class="bar bar-header bar-positive">
+        <h1 class="title">Account Form</h1>
+        <div class="button button-clear" ng-click="closeModal()"><span class="icon ion-close"></span></div>
+    </header>
+    <ion-content class="has-header">
+        <form name='form'>
+            <div class="row">
+                <div class="col">
+                    <div class="list">
+                        <label class="item item-input">
+                            <input type="text" placeholder="Account Name" ng-model="account.AccountName" />
+                        </label>
+                        <label class="item item-input">
+                            <input type="text" placeholder="Account No" ng-model="account.AccountNo" />
+                        </label>
+                    </div>
+                </div>
+                <div class="col col-34">
+                    <a class="mfb-component__button--main" style="background: black; display: block; margin: 0 auto;" icon-set on-icon-choose="getIcon">
+                        <i class="mfb-component__main-icon--resting {{account.AccountIcon}}"></i>
+                    </a><br />
+                    <label style="text-align: center; display: block; margin: 0 auto; color: #E4D8D8; margin-top: -13px;">Choose icon</label>
+                </div>
+            </div>
+            <div class="row" style="margin-top: -18px;">
+                <div class="col">
+                    <label class="item item-input">
+                        <textarea placeholder="Description" ng-model="account.AccountDescription"></textarea>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <button ng-disabled="!form.$dirty" class="button button-block button-royal" ng-click="saveAccount(form,account)" style="margin-left: 5px;margin-right: 5px;">
+                    {{button.buttonText}}
+                </button>
+            </div>
+        </form>
+    </ion-content>
+</div>

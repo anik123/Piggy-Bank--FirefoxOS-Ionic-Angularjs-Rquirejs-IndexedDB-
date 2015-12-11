@@ -1,0 +1,42 @@
+﻿<ion-view>
+    <ion-header-bar align-title="center" class="bar bar-header item-input-inset bar-positive">
+        <div class="buttons">
+            <button class="button icon ion-reply" ng-click="back()"></button>
+        </div>
+        <h1 class="title">Withdrawal</h1>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <form name='form'>
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Account<sup class="assertive">*</sup></span><br />
+                    <select style="width: 96%; margin-top: 3px; margin-bottom: 4px;" ng-options="account.AccountID as account.AccountName for account in accountList" ng-model="transaction.AccountID" ng-change="getBalance(transaction)"></select>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Account Balance</span>
+                    <input type="number" step="any" name="transaction" disabled="" placeholder="0.0" style="width: 96%;" ng-model="transaction.TransactionBalance">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Deposit Date<sup class="assertive">*</sup></span>
+                    <input type="date" id="tran_date" placeholder="{{currentDate}}" style="width: 96%;" ng-model="transaction.TransactionDate" />
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Withdraw Amount<sup class="assertive">*</sup></span>
+                    <input type="number" step="any" name="transaction" placeholder="0.0" style="width: 96%;" ng-model="transaction.Amount">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Remarks</span>
+                    <textarea placeholder="Leave a note for the transaction" style="width: 96%;" ng-model="transaction.Remarks"></textarea>
+                </label>
+
+
+            </div>
+            <div class="row">
+                <button class="button button-block button-royal" ng-disabled="!form.$dirty" ng-click="save(form,transaction)" style="margin-left: 5px;margin-right: 5px;margin-top: -20px;">
+                    Withdraw Balance
+                </button>
+            </div>
+
+        </form>
+    </ion-content>
+</ion-view>

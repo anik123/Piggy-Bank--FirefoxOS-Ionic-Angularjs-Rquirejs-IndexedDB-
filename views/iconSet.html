@@ -1,0 +1,19 @@
+﻿<div class="modal">
+    <header class="bar bar-header bar-positive">
+        <h1 class="title">Choose a icon</h1>
+        <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
+    </header>
+    <ion-content class="has-header" padding="true">
+        <div style="width: 100%; text-align: center; margin-top: 5px;">
+            <table style="width: 90%; border: 1px solid #000; text-align: center; margin: auto;">
+                <tbody>
+                    <tr ng-repeat="ic in appIcon">
+                        <td ng-repeat="row in ic.icon track by $index" style="border: 1px solid #000;">
+                            <a class="button button-icon icon {{row}}" ng-click="chooseIcon(row)"></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </ion-content>
+</div>

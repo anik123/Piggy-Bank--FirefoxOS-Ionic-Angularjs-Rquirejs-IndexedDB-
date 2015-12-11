@@ -1,0 +1,54 @@
+﻿<ion-view>
+    <ion-header-bar align-title="center" class="bar bar-header item-input-inset bar-positive">
+        <div class="buttons">
+            <button class="button icon ion-reply" ng-click="back()"></button>
+        </div>
+        <label class="item-input-wrapper" style="margin-left: 7px;">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="Search account" ng-model="search.serachText">
+        </label>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <!--<ion-list>-->
+        <!--<ion-item class="item-full" ng-repeat="account in accountList" href="#">-->
+        <div class="list card" ng-repeat="account in accountList | filter:{ AccountName: search.serachText }">
+            <div class="item item-avatar item-icon-left balanced">
+                <a href="#" class="balanced" ng-click="edit(account)"><i class="icon {{account.AccountIcon}}"></i></a>
+                <h2>{{account.AccountName}}</h2>
+                <p>{{account.AccountNo}}</p>
+                <!--<p>Current Balance : {{account.Balance}}</p>-->
+                <!--<p>
+                    Description : private account
+                </p>-->
+            </div>
+            <div class="item tabs tabs-secondary tabs-icon-left assertive">
+                <div class="tab-item">
+                    <!--<i class="icon ion-thumbsup"></i>
+                    Like-->
+                    Inc  : {{account.TotalIncome}}
+                </div>
+                <div class="tab-item">
+                    <!--<i class="icon ion-chatbox"></i>
+                    Comment-->
+                    Exp : {{account.TotalExpense}}
+                </div>
+                <div class="tab-item">
+                    <!--<i class="icon ion-chatbox"></i>
+                    Comment-->
+                    Bal : {{account.Balance}}
+                </div>
+
+            </div>
+        </div>
+        <!--</ion-item>-->
+        <!--</ion-list>-->
+
+
+
+
+    </ion-content>
+    <nav mfb-menu position="br" effect="zoomin"
+         active-icon="ion-plus-round" resting-icon="ion-plus-round"
+         toggling-method="click" ng-click="addAcount()">
+    </nav>
+</ion-view>
