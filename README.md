@@ -1,5 +1,5 @@
 # Piggy Bank 
-# [ FirefoxOS,Ionic,Angularjs,Rquirejs,IndexedDB]
+# [ FirefoxOS,Ionic,Angularjs,Requirejs,IndexedDB]
 This an unpublished app for firefoxOS. 
 
 The technologies for this app are ionic framework,angularjs,requirejs,indexeddb.
