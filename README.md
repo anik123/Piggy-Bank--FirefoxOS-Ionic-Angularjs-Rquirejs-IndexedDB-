@@ -4,7 +4,7 @@ This an unpublished app for firefoxOS.
 
 The technologies for this app are ionic framework,angularjs,requirejs,indexeddb.
 
-Some of the screenshot of this app 
+Some screenshots of this app 
 
 
 ![Deshboard](http://i66.tinypic.com/rlw2s5.jpg)
